@@ -1,0 +1,11 @@
+@import "../../assets/styles/partials/variables";
+
+.todo-wrapper{
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input{
+    background: $whiteColor;
+}

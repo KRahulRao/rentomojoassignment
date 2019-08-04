@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $primaryFontStack;
+  background: $primaryColor;
+  padding: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: $fontWeightBold;
+}
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+label{
+  &.form-label{
+    font-size: 14px;
+  }
+}
+
+input,select,textarea{
+  &.form-control{
+    height:38px;
+    font-size: 14px;
+    color: $inputColor;
+    padding: .375rem .75rem;
+    width: 100%;
+    border: 2px solid $whiteColor;
+    outline: none;
+    &:hover,&:focus{
+      border:2px solid $inputHoverColor;
+    }
+  }
+}
+
+select{
+  &.form-control{
+    padding: .375rem .62rem;
+  }
+}
+
+
+
+//Button Style
+button,a{
+  outline: none;
+  &.app-btn {
+    background-color: $secondaryColor;
+    border: 1px solid $secondaryColor;
+    padding: 9px 14px;
+    color: $whiteColor;
+    font-weight: $fontWeightRegular;
+    font-size: 15px;
+    min-width: 75px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.15;
+    border-radius: 4px;
+    text-transform: capitalize;
+    &:hover,
+    &:focus {
+      color: $whiteColor;
+    }
+  }
+  &.btn {
+    &.cell-btn {
+      padding: 0.3rem 0.4rem;
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+  }
+}
+
+.flex-1{
+  flex:1;
+}
+
+.font-md{
+  font-size: 16px!important;
+}

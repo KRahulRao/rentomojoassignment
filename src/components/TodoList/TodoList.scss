@@ -1,0 +1,35 @@
+@import "../../assets/styles/partials/variables";
+
+.list-wrapper{
+    width: 100%;
+    margin-top: 10px;
+    background: $whiteColor;
+    padding: 15px;
+    ul{
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        li{
+            padding-bottom: 5px;
+            border-bottom: 1px solid $listBorderColor;
+            display: flex;
+            flex-direction: row;
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+            span.list-item{
+                flex:1;
+                font-size: 14px;
+            }
+            span.delete-icon{
+                color: $deleteIconColor;
+                background: url("#{$imgPath}delete.png") no-repeat center;
+                background-size: 13px;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                align-self: center;
+            }
+        }
+    }
+}
