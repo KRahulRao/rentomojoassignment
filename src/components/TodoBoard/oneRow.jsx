@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { inject, observer } from "mobx-react";
-import TodoList from "../TodoList/TodoList";
 import "./ToDoBoard.scss";
 import appConstants from '../../constants/appConstants';
 import  Button from 'react-bootstrap/Button';

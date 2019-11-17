@@ -9,3 +9,21 @@
 input{
     background: $whiteColor;
 }
+.viewPosts{
+   cursor: pointer;
+   color: blue;
+}
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+  }
+  table {
+    border-spacing: 0.5rem;
+    border-collapse: collapse;
+    height: 200px;
+  }
+.link-btn{
+    color: blue;
+    float: right;
+    cursor: pointer;
+} 

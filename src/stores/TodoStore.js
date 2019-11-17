@@ -1,36 +1,36 @@
 import { observable, action } from "mobx";
-
-const initialState = {
-    todolist: [],
-    count: 0
-}
+import datafetcher from '../Fetchers/DataFetcher'
 
 class TodoStore {
-    constructor() {
-      
+
+    @observable name = '';
+    @observable company = '';
+    @observable blogs = '';
+    
+    @action
+    fetchUsers(){
+         return datafetcher.getUsers();
     }
 
-    @observable todolist = initialState.todolist;
-    @observable count = initialState.count;
-    @observable selectedRhs =  [];
-    @observable selectedRhsTxt =  '';
-    @observable selectedLhs = '';
-    @observable selectedOperator = '';
-    @observable allData = [];
-
-    @action addData(){
-        this.allData.push({ lhs: this.selectedLhs, rhs: (this.selectedLhs==='Account' || this.selectedLhs === 'Country') ? this.selectedRhs : this.selectedRhsTxt, operator:this.selectedOperator });
-        // localStorage.setItem('allData',this.allData);
+    @action
+    fetchUserPosts(id){
+        return datafetcher.getPosts(id);
     }
 
-    @action getData(){
-        return this.allData;
+    @action
+    getPostDetails(id){
+        return datafetcher.getPostDetails(id);
     }
 
-    @action counter() {
-        this.count++;
-        console.log(this.count);
+    @action
+    getPostcomments(id){
+        return datafetcher.getPostComments(id);
     }
+    @action
+    deletePosts(id){
+        return datafetcher.deletePosts(id);
+    }
+
 }
 
 export default TodoStore;
